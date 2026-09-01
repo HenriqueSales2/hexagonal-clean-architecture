@@ -27,13 +27,13 @@ public class JpaProductRepositoryAdapter implements ProductRepository {
     @Override
     public Optional<Product> findById(ProductId id) {
         return repository.findById(id.getValue())
-                .map(productEntity -> mapper.toDomain(productEntity));
+                .map(mapper::toDomain);
     }
 
     @Override
     public List<Product> findAll() {
         return StreamSupport.stream(repository.findAll().spliterator(), false)
-                .map(productEntity -> mapper.toDomain(productEntity))
+                .map(mapper::toDomain)
                 .collect(Collectors.toList());
     }
 

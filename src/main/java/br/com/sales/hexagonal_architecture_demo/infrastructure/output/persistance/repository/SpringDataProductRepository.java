@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import br.com.sales.hexagonal_architecture_demo.infrastructure.output.persistance.entity.ProductEntity;
 
-
 @Repository
 public interface SpringDataProductRepository extends CrudRepository<ProductEntity, String> {
 }

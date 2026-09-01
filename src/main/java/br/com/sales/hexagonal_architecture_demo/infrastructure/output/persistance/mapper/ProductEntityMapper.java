@@ -1,11 +1,12 @@
 package br.com.sales.hexagonal_architecture_demo.infrastructure.output.persistance.mapper;
 
+import org.springframework.stereotype.Component;
+
 import br.com.sales.hexagonal_architecture_demo.domain.model.Product;
 import br.com.sales.hexagonal_architecture_demo.domain.vo.Money;
 import br.com.sales.hexagonal_architecture_demo.domain.vo.ProductId;
 import br.com.sales.hexagonal_architecture_demo.domain.vo.ProductStatus;
 import br.com.sales.hexagonal_architecture_demo.infrastructure.output.persistance.entity.ProductEntity;
-import org.springframework.stereotype.Component;
 
 @Component
 public class ProductEntityMapper {
